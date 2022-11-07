@@ -1,1 +1,199 @@
-/* You can add global styles to this file, and also import other style files */
+/* GOOGLE FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* VARIABLE CSS*/
+:root{
+
+    --header-height: 3rem;
+
+/*Font weight*/
+    --font-medium:500;
+    --font-semi-bold:600;
+    --font-bold:700;
+/*color*/
+
+/*change favorite color*/
+/*  
+--hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+    /*HSL color mode 
+ /*
+   --first-color: hsl(var(--hue-color), 69%, 61%) ;
+   --first-color-second:hsl(var(--hue-color), 69%, 61%) ;
+   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+   --black-color: hsl(var(--hue-color), 8%, 15%);
+   --black-normal-color: hsl(var(--hue-color), 8%, 45%);
+   --black-light-color: hsl(var(--hue-color), 8%, 65%);
+   --input-color: hsl(var(--hue-color), 70%, 96%) ;
+   --body-color: hsl(var(--hue-color), 60%, 99%);
+   --white-color: #fff;
+   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+*/
+/*base 168°, 55%, 77%*/
+
+--hue-color: 168; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+   --first-color: hsl(var(--hue-color), 55%, 77%) ;
+   --first-color-second:hsl(var(--hue-color), 69%, 61%) ;
+   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+   --black-color: hsl(var(--hue-color), 8%, 15%);
+   --black-normal-color: hsl(var(--hue-color), 8%, 45%);
+   --black-light-color: hsl(var(--hue-color), 8%, 65%);
+   --input-color: hsl(var(--hue-color), 70%, 96%) ;
+   --body-color: hsl(var(--hue-color), 60%, 99%);
+   --white-color: #fff;
+   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+/*Font and typography*/
+--body-font: 'Poppins', sans-serif;
+
+ /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+--big-font-size: 2rem;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--h3-font-size: 1.125rem;
+--normal-font-size:.938rem ;
+--small-font-size: .813rem;
+--smaller-font-size:.75rem ;
+
+/*margin*/
+
+--mb-1: .5rem;
+--mb-2: 1rem;
+--mb-3: 1.5rem;
+--mb-4: 2rem;
+--mb-5: 2.5rem;
+--mb-6: 3rem;
+
+/*zindex*/
+
+--z-fidex:100;
+
+/*rotable img*/
+--rotage-img: rotate(-30deg);
+
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 768px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size:1.25rem ;
+        --normal-font-size:1rem ;
+        --small-font-size: .875rem;
+        --smaller-font-size:.813rem ;
+    }
+}
+
+/*variable dark theme*/
+body.dark-theme{
+    
+   --first-color-second:hsl(var(--hue-color), 30%, 8%) ;
+   --black-color: hsl(var(--hue-color), 8%, 95%);
+   --black-normal-color: hsl(var(--hue-color), 8%, 75%);
+   --black-light-color: hsl(var(--hue-color), 8%, 65%);
+   --input-color: hsl(var(--hue-color), 29%, 16%) ;
+   --body-color: hsl(var(--hue-color), 28%, 12%);
+   --white-color: hsl(var(--hue-color), 29%, 16%);
+   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+}
+
+
+/*button dark/light*/
+.nav__btns{
+    display: flex;
+    align-items: center;   
+}
+.change__theme{
+    font-size: 1.25rem;
+    color: var(--first-color);
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.change__theme:hover{
+    color: var(--black-color);
+}
+
+/*base*/
+
+*::after,::before{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--white-color);
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--black-color);
+    line-height: 1.6;
+}
+h1,h2,h3,p,ul{
+    margin: 0;
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--black-color);
+}
+a:hover{
+    color: var(--first-color);
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+i{
+    color:var(--first-color)
+}
+i:hover{
+    color: var(--black-color);
+}
+/*class css*/
+
+.section{
+    padding: 5rem 0 2rem;
+}
+.section-title{
+    position: relative;
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-4);
+    text-align: center;
+    letter-spacing:.1rem ;
+}
+.section-title::after{
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: .18rem;
+    top:-1rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: var(--black-color);
+}
+
+@media screen and (min-width: 768px){
+    body{
+        margin: 0;
+    }
+    .section{
+        padding: 7rem 0 3rem;
+    }
+    .section-title::after{
+        width: 76px;
+    }
+}
